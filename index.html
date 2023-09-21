@@ -2,13 +2,247 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <title>Vite App</title>
   </head>
-  <body>
-    <h1>Hola mundo Vite con Bootstrap y Yarn</h1>
+  <body data-bs-theme="dark">
     
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Tiendita IT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+
+          <div class="dropdown dropstart">
+            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-cart3" style="font-size: 1.8rem;"></i>
+            </a>
+            <div id="carrito" class="dropdown-menu">
+              <table class="table">
+                <thead>
+                  <tr>
+                   
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                 
+                </tbody>
+              </table>
+              <div class="grid gap-2 d-md-block" >
+                <button id="vaciar-carrito" class="btn btn-success" type="button">Vaciar Carrito</button>
+                <button id="procesar-carrito" class="btn btn-danger" type="button">Procesar compra</button>
+              </div>
+            </div>
+          </div>
+          </div>
+       </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+    <div class="princing-header px-3 py-3 mx-auto text-center">
+      <h1 class="display-4 mt-4">Lista de productos</h1>
+      <div class="lead">Selecciona uno de nuestros productos</div>
+    </div>
+
+    <div class="container" id="lista-productos">
+      <div class="row">
+        <div class="col-3 my-3">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="my-0 font-weight-bold">ACER</h4>
+            </div>
+            <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+            
+            <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >1250</span> </h5>
+            <ul class="list-unstyled mt-3 mb-4 text-end ">
+              <li class="text-center mx-3">8GB RAM</li>
+              <li class="text-center mx-3 color">COLOR ROJO</li>
+              <li class="text-center mx-3">1T TB SSD</li>
+            </ul>
+              <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="d-grid gap-2">
+                <a href="#" class="btn btn-primary agregar-carrito" data="1">Comprar</a>
+              </div>
+            </div>
+          </div> <!-- Card-->
+
+          <div class="col-3 my-3">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-bold">Advance</h4>
+              </div>
+              <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+              
+              <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >999</span> </h5>
+              <ul class="list-unstyled mt-3 mb-4 text-end ">
+                <li class="text-center mx-3">8GB RAM</li>
+                <li class="text-center mx-3 color">COLOR PLATEADA</li>
+                <li class="text-center mx-3">1T TB SSD</li>
+              </ul>
+                <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="d-grid gap-2">
+                  <a href="#" class="btn btn-primary agregar-carrito" data="2">Comprar</a>
+                </div>
+              </div>
+            </div> <!-- Card-->
+  
+  
+            <div class="col-3 my-3">
+              <div class="card">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-bold">Apple</h4>
+                </div>
+                <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+                
+                <h5 class="card-title text-center precio">$<span class="display-6 mx-3 fw-bold" >1300</span> </h5>
+              <ul class="list-unstyled mt-3 mb-4 text-end ">
+                <li class="text-center mx-3">16GB RAM</li>
+                <li class="text-center mx-3 color">COLOR BLANCA</li>
+                <li class="text-center mx-3">1T TB SSD</li>
+              </ul>
+                <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-primary agregar-carrito" data="3">Comprar</a>
+                  </div>
+                </div>
+              </div> <!-- Card-->
+    
+    
+              <div class="col-3 my-3">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-bold">Razer</h4>
+                  </div>
+                  <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+                  
+                  <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >1800</span> </h5>
+                  <ul class="list-unstyled mt-3 mb-4 text-end ">
+                    <li class="text-center mx-3">32GB RAM</li>
+                    <li class="text-center mx-3 color">COLOR PLATEADA</li>
+                    <li class="text-center mx-3">1T TB SSD</li>
+                  </ul>
+                    <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-primary agregar-carrito" data="4">Comprar</a>
+                    </div>
+                  </div>
+                </div> <!-- Card-->
+      
+      
+                <div class="col-3 my-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-bold">HP</h4>
+                    </div>
+                    <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+                    
+                    <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >5397</span> </h5>
+                    <ul class="list-unstyled mt-3 mb-4 text-end ">
+                      <li class="text-center mx-3">8GB RAM</li>
+                      <li class="text-center mx-3 color">COLOR ROJO</li>
+                      <li class="text-center mx-3">1T TB SSD</li>
+                    </ul>
+                      <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div class="d-grid gap-2">
+                        <a href="#" class="btn btn-primary agregar-carrito" data="5">Comprar</a>
+                      </div>
+                    </div>
+                  </div> <!-- Card-->
+        
+        
+                  <div class="col-3 my-3">
+                    <div class="card">
+                      <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">Huawei</h4>
+                      </div>
+                      <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+                      
+                      <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >999</span> </h5>
+                      <ul class="list-unstyled mt-3 mb-4 text-end ">
+                        <li class="text-center mx-3">16GB RAM</li>
+                        <li class="text-center mx-3 color">COLOR NEGRO</li>
+                        <li class="text-center mx-3">1T TB SSD</li>
+                      </ul>
+                        <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-grid gap-2">
+                          <a href="#" class="btn btn-primary agregar-carrito" data="6">Comprar</a>
+                        </div>
+                      </div>
+                    </div> <!-- Card-->
+          
+          
+                    <div class="col-3 my-3">
+                      <div class="card">
+                        <div class="card-header">
+                          <h4 class="my-0 font-weight-bold">Leonovo</h4>
+                        </div>
+                        <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+                        
+                        <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >1200</span> </h5>
+                       <ul class="list-unstyled mt-3 mb-4 text-end ">
+                        <li class="text-center mx-3">16GB RAM</li>
+                        <li class="text-center mx-3 color">COLOR AZUL</li>
+                        <li class="text-center mx-3">1T TB SSD</li>
+                       </ul>
+                        <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <div class="d-grid gap-2">
+                            <a href="#" class="btn btn-primary agregar-carrito" data="7">Comprar</a>
+                          </div>
+                        </div>
+                      </div> <!-- Card-->
+            
+                      <div class="col-3 my-3">
+                        <div class="card">
+                          <div class="card-header">
+                            <h4 class="my-0 font-weight-bold">LG</h4>
+                          </div>
+                          <img src="https://img.olhardigital.com.br/wp-content/uploads/2021/12/montar-pc-gamer-shutterstock_1430140055.jpg" class="card-img-top" alt="...">
+                          
+                          <h5 class="card-title text-center precio ">$<span class="display-6 mx-3 fw-bold" >699</span> </h5>
+                          <ul class="list-unstyled mt-3 mb-4 text-end ">
+                            <li class="text-center mx-3">8GB RAM</li>
+                            <li class="text-center mx-3 color">COLOR ROJO</li>
+                            <li class="text-center mx-3">250GB SSD</li>
+                          </ul>
+                            <p class="card-text mx-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="d-grid gap-2">
+                              <a href="#" class="btn btn-primary agregar-carrito" data="8">Comprar</a>
+                            </div>
+                          </div>
+                        </div> <!-- Card-->
+              
+              
+                      </div> <!-- col-3-->
+                    </div> <!-- col-3-->
+                  </div> <!-- col-3-->
+                </div> <!-- col-3-->
+              </div> <!-- col-3-->
+            </div> <!-- col-3-->
+          </div> <!-- col-3-->
+
+        </div> <!-- col-3-->
+        
+        
+
+      </div> <!--row-->
+    </div> <!--container-->
     
     <script type="module" src="/main.js"></script>
   </body>
